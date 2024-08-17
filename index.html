@@ -21,12 +21,13 @@
             const now = new Date();
             const timeDifference = targetDate - now;
 
-            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const weeks = Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 7));
+            const days = Math.floor((timeDifference % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
             const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-            document.getElementById('countdown').innerText = `${days}일 ${hours}시간 ${minutes}분 ${seconds}초`;
+            document.getElementById('countdown').innerText = `${weeks}주 ${days}일 ${hours}시간 ${minutes}분 ${seconds}초`;
         }
 
         setInterval(updateCountdown, 1000);

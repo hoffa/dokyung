@@ -4,6 +4,30 @@ body {
     background-color: white;
     color: black;
     font-size: 1.5em;
+    font-weight: 500;
+}
+
+#countdown {
+    position: relative;
+    background: linear-gradient(90deg, #ff6f00, #ff1493, #00bfff, #ff6f00);
+    background-size: 750% 750%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 40s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 p {

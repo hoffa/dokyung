@@ -20,7 +20,7 @@ body {
 
 #countdown {
     position: relative;
-    background: linear-gradient(90deg, #ff6f00, #ff1493, #00bfff, #ff6f00);
+    background: linear-gradient(90deg, #ff6f00, #ff1493, #0080ff, #00ed8a);
     background-size: 750% 750%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

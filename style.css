@@ -6,6 +6,18 @@ body {
     font-size: 1.5em;
 }
 
+p {
+    margin: 0.5em 0;
+}
+
+.heart {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.5em;
+}
+
 @media (prefers-color-scheme: dark) {
 
     html,

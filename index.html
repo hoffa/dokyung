@@ -35,7 +35,14 @@
             const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-            document.getElementById('countdown').innerText = `${weeks}주 ${days}일 ${hours}시간 ${minutes}분 ${seconds}초`;
+            let countdownText = '';
+            if (weeks > 0) countdownText += `${weeks}주 `;
+            if (days > 0) countdownText += `${days}일 `;
+            if (hours > 0) countdownText += `${hours}시간 `;
+            if (minutes > 0) countdownText += `${minutes}분 `;
+            if (seconds > 0) countdownText += `${seconds}초`;
+
+            document.getElementById('countdown').innerText = countdownText.trim();
         }
 
         setInterval(updateCountdown, 1000);

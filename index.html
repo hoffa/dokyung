@@ -30,6 +30,7 @@
             const timeDifference = targetDate - now;
             if (timeDifference <= 0) {
                 document.getElementById('countdown').innerText = '0일';
+                return;
             }
 
             const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));

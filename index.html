@@ -28,6 +28,9 @@
             const targetDate = new Date('2024-09-03T11:40:00+02:00'); // Brussels time
             const now = new Date();
             const timeDifference = targetDate - now;
+            if (timeDifference <= 0) {
+                document.getElementById('countdown').innerText = '0일';
+            }
 
             const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
             const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
